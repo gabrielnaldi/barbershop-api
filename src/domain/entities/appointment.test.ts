@@ -2,8 +2,12 @@ import { Appointment } from './appointment';
 
 describe('Appointments', () => {
   it('should make an appointment', () => {
-    const appointment = new Appointment();
+    const startsAt = new Date();
+    const endsAt = new Date();
+    const appointment = new Appointment({ startsAt, endsAt });
 
-    expect(appointment).toBeTruthy();
+    expect(appointment).toBeInstanceOf(Appointment);
+    expect(appointment.startsAt).toBe(startsAt);
+    expect(appointment.endsAt).toBe(endsAt);
   });
 });
