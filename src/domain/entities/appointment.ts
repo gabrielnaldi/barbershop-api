@@ -1,6 +1,7 @@
 interface AppointmentProps {
   startsAt: Date;
   endsAt: Date;
+  customer: string;
 }
 
 export class Appointment {
@@ -12,5 +13,9 @@ export class Appointment {
 
   get endsAt() {
     return this.props.endsAt;
+  }
+
+  get customer() {
+    return this.props.customer;
   }
 }
