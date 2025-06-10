@@ -1,12 +1,12 @@
 import js from '@eslint/js';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
 import json from '@eslint/json';
 import { defineConfig } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintPluginImport from 'eslint-plugin-import';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslitPluginUnusedImports from 'eslint-plugin-unused-imports';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig([
   {
@@ -20,8 +20,8 @@ export default defineConfig([
     plugins: {
       eslintConfigPrettier: eslintConfigPrettier,
       prettier: eslintPluginPrettier,
-      eslintPluginImport: eslintPluginImport,
-      "unused-imports": eslitPluginUnusedImports,
+      import: eslintPluginImport,
+      'unused-imports': eslitPluginUnusedImports,
     },
     extends: [eslintConfigPrettier],
     rules: {
