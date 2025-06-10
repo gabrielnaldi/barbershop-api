@@ -4,8 +4,10 @@
  */
 
 import type { Config } from 'jest';
+import { createDefaultPreset } from 'ts-jest';
 
 const config: Config = {
+  ...createDefaultPreset(),
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
