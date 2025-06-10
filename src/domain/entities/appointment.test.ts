@@ -1,7 +1,7 @@
 import { Appointment } from './appointment';
 
 describe('Appointments', () => {
-  it('should make an appointment', () => {
+  it('should be able to make an appointment', () => {
     const startsAt = new Date();
     const endsAt = new Date();
     const appointment = new Appointment({ startsAt, endsAt });
