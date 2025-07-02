@@ -9,6 +9,10 @@ class Barber {
   get name() {
     return this.props.name;
   }
+
+  get specialties() {
+    return this.props.specialties;
+  }
 }
 
 describe('Barber entity', () => {
@@ -22,5 +26,18 @@ describe('Barber entity', () => {
 
     expect(barber).toBeInstanceOf(Barber);
     expect(barber.name).toBe(barberData.name);
+  });
+
+  it('should be able to add a specialties to barbers', () => {
+    const barberData: BarberProps = {
+      name: 'Augusto',
+      specialties: ['cabelo', 'barba'],
+    };
+
+    const barber = new Barber(barberData);
+
+    expect(barber).toBeInstanceOf(Barber);
+    expect(barber.name).toBe(barberData.name);
+    expect(barber.specialties).toEqual(barberData.specialties);
   });
 });
