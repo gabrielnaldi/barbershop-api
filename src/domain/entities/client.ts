@@ -1,9 +1,4 @@
-interface ClientProps {
-  name: string;
-  phone: string;
-  email?: string;
-  birthDate: Date;
-}
+import { ClientProps } from '../contracts/client';
 
 export class Client {
   constructor(private props: ClientProps) {}
