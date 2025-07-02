@@ -1,9 +1,18 @@
 import { Client } from './client';
 
 describe('Client entitie', () => {
-  it('should create a client', () => {
-    const client = new Client();
+  it('should make sure client have name, phone and birth date', () => {
+    const clientData = {
+      name: 'Lorem ipsum',
+      birthDate: new Date(),
+      phone: '+5512912345678',
+    };
 
-    expect(client).toBeTruthy();
+    const client = new Client(clientData);
+
+    expect(client).toBeInstanceOf(Client);
+    expect(client.name).toBe(clientData.name);
+    expect(client.birthDate).toBe(clientData.birthDate);
+    expect(client.phone).toBe(clientData.phone);
   });
 });
