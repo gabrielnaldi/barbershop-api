@@ -1,9 +1,14 @@
 import { Treatment } from './treatment';
 
 describe('Product entity', () => {
-  it('should be able to create a Treatment', () => {
-    const treatment = new Treatment();
+  it('should create a Treatment with name', () => {
+    const treatmentData = {
+      name: 'Barba',
+    };
+
+    const treatment = new Treatment(treatmentData);
 
     expect(treatment).toBeInstanceOf(Treatment);
+    expect(treatment.name).toBe(treatmentData.name);
   });
 });
