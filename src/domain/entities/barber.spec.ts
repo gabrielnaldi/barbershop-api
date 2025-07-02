@@ -1,19 +1,5 @@
-interface BarberProps {
-  name: string;
-  specialties: Array<string>;
-}
-
-class Barber {
-  constructor(private props: BarberProps) {}
-
-  get name() {
-    return this.props.name;
-  }
-
-  get specialties() {
-    return this.props.specialties;
-  }
-}
+import { BarberProps } from '../contracts/barber';
+import { Barber } from './barber';
 
 describe('Barber entity', () => {
   it('should make sure a barber has name', () => {
