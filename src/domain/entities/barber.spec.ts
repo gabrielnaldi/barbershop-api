@@ -7,8 +7,12 @@ class Barber {
 }
 
 describe('Barber entity', () => {
-  it('should be able to create a barber', () => {
-    const barber = new Barber();
+  it('should make sure a barber has name ', () => {
+    const barberData: BarberProps = {
+      name: 'Augusto',
+    };
+
+    const barber = new Barber(barberData);
 
     expect(barber).toBeInstanceOf(Barber);
   });
