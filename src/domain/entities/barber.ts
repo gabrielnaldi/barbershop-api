@@ -10,4 +10,8 @@ export class Barber {
   get specialties() {
     return this.props.specialties;
   }
+
+  get weekdays() {
+    return this.props.weekdays;
+  }
 }
