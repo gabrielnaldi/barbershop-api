@@ -6,6 +6,7 @@ describe('Barber entity', () => {
     const barberData: BarberProps = {
       name: 'Augusto',
       specialties: [],
+      weekdays: [],
     };
 
     const barber = new Barber(barberData);
@@ -18,6 +19,7 @@ describe('Barber entity', () => {
     const barberData: BarberProps = {
       name: 'Augusto',
       specialties: ['cabelo', 'barba'],
+      weekdays: [],
     };
 
     const barber = new Barber(barberData);
@@ -25,5 +27,17 @@ describe('Barber entity', () => {
     expect(barber).toBeInstanceOf(Barber);
     expect(barber.name).toBe(barberData.name);
     expect(barber.specialties).toEqual(barberData.specialties);
+  });
+
+  it('should be able to set weekdays that barbers work', () => {
+    const barberData: BarberProps = {
+      name: 'Augusto',
+      specialties: [],
+      weekdays: ['MONDAY'],
+    };
+
+    const barber = new Barber(barberData);
+
+    expect(barber.weekdays).toEqual(barberData.weekdays);
   });
 });
