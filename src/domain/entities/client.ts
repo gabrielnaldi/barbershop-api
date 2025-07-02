@@ -1,6 +1,7 @@
 interface ClientProps {
   name: string;
   phone: string;
+  email?: string;
   birthDate: Date;
 }
 
@@ -17,5 +18,9 @@ export class Client {
 
   get phone() {
     return this.props.phone;
+  }
+
+  get email() {
+    return this.props.email;
   }
 }
