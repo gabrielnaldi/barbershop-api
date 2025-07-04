@@ -43,4 +43,18 @@ describe('Barber entity', () => {
 
     expect(barber.weekdays).toEqual([weekday]);
   });
+
+  it('should be able to add a specialty to a barber', () => {
+    const barber = new Barber({
+      name: 'Augusto',
+      specialties: [],
+      weekdays: [],
+    });
+
+    const specialty = 'Corte de cabelo';
+
+    barber.addSpecialty(specialty);
+
+    expect(barber.specialties).toEqual([specialty]);
+  });
 });
