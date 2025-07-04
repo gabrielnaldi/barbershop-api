@@ -1,5 +1,7 @@
 export class Treatment {
-  constructor(private props: { name: string; price: number }) {}
+  constructor(
+    private props: { name: string; price: number; barbersIds: string[] },
+  ) {}
 
   get name() {
     return this.props.name;
@@ -7,5 +9,13 @@ export class Treatment {
 
   get price() {
     return this.props.price;
+  }
+
+  get barbersIds() {
+    return this.props.barbersIds;
+  }
+
+  addBarber(barberId: string) {
+    this.props.barbersIds.push(barberId);
   }
 }
