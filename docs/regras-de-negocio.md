@@ -1,5 +1,19 @@
 # 📝 REGRAS DE NEGÓCIO
 
+## Barbeiros
+
+* Dias de trabalho devem ser opcionais
+* Deve ser possível adicionar e remover dias de trabalho
+* Dias de trabalho não podem ser repetidos (Ex: ['MONDAY', 'MONDAY'])
+* Especialidades devem ser opcionais
+* Deve ser possível adicionar e remover especialidades
+* Especialidades não devem se repetir (Ex: ['BARBA', 'BARBA'])
+
+## Serviços
+
+* Deve ser possível adicionar e remover babeiros
+* Não deve ser possível adicionar o mesmo barbeiro mais de uma vez no mesmo serviço
+  
 ## Horário de funcionamento
 
 * Segunda a sábado, das 09:00 às 20:00.
