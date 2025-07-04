@@ -1,6 +1,6 @@
 # 🧩 FUNCIONALIDADES PRINCIPAIS
 
-## Cadastro de clientes
+## Cadastro de clientes (clients)
 
 * Nome
 * Telefone
@@ -8,13 +8,13 @@
 * Data de nascimento.
 * Histórico de atendimentos e agendamentos.
 
-## Cadastro de barbeiros
+## Cadastro de barbeiros (barbers)
 
 * Nome
 * Especialidades
 * Dias/horários de trabalho
 
-## Serviços oferecidos
+## Serviços oferecidos (treatments)
 
 * Nome
 * Duração
