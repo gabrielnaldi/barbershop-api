@@ -15,18 +15,19 @@ describe('Barber entity', () => {
     expect(barber.name).toBe(barberData.name);
   });
 
-  it('should be able to add a specialties to barbers', () => {
+  it('should be able to create a barber with specialties', () => {
+    const specialty = 'Corte de cabelo';
+
     const barberData: BarberProps = {
       name: 'Augusto',
-      specialties: ['cabelo', 'barba'],
+      specialties: [specialty],
       weekdays: [],
     };
 
     const barber = new Barber(barberData);
 
     expect(barber).toBeInstanceOf(Barber);
-    expect(barber.name).toBe(barberData.name);
-    expect(barber.specialties).toEqual(barberData.specialties);
+    expect(barber.specialties).toEqual([specialty]);
   });
 
   it('should be able to set weekdays that barbers work', () => {
