@@ -29,4 +29,20 @@ describe('Product entity', () => {
 
     expect(treatment.barbersIds).toEqual([id]);
   });
+
+  it('should not be able to add the same barber twice', () => {
+    const treatment = new Treatment({
+      name: 'Barba',
+      price: 5000,
+      barbersIds: [],
+    });
+
+    const id = randomUUID();
+
+    treatment.addBarber(id);
+
+    expect(() => treatment.addBarber(id)).toThrow(
+      new Error('Barber already added to treatment'),
+    );
+  });
 });
