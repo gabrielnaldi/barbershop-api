@@ -97,4 +97,17 @@ describe('Barber entity', () => {
 
     expect(barber.weekdays).toEqual([weekday]);
   });
+
+  it('should not be able to add the same weekday twice', () => {
+    const weekday = 'MONDAY';
+    const barber = new Barber({
+      name: 'Augusto',
+      specialties: [],
+      weekdays: [weekday],
+    });
+
+    expect(() => barber.addWeekday(weekday)).toThrow(
+      new Error('Weekday already added to barber'),
+    );
+  });
 });
