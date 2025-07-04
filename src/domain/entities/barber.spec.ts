@@ -57,4 +57,18 @@ describe('Barber entity', () => {
 
     expect(barber.specialties).toEqual([specialty]);
   });
+
+  it('should be able to remove a specialty from a barber', () => {
+    const specialty = 'Corte de cabelo';
+
+    const barber = new Barber({
+      name: 'Augusto',
+      specialties: [specialty],
+      weekdays: [],
+    });
+
+    barber.removeSpecialty(specialty);
+
+    expect(barber.specialties).toEqual([]);
+  });
 });
