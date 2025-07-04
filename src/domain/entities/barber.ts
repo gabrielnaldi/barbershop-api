@@ -18,4 +18,10 @@ export class Barber {
   addSpecialty(specialty: string) {
     this.props.specialties.push(specialty);
   }
+
+  removeSpecialty(specialty: string) {
+    this.props.specialties = this.props.specialties.filter(
+      s => s !== specialty,
+    );
+  }
 }
