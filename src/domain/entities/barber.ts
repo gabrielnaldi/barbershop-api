@@ -37,4 +37,8 @@ export class Barber {
 
     this.props.weekdays.push(weekday);
   }
+
+  removeWeekday(weekday: Weekday) {
+    this.props.weekdays = this.props.weekdays.filter(w => w !== weekday);
+  }
 }
