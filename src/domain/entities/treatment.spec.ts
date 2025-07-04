@@ -45,4 +45,19 @@ describe('Product entity', () => {
       new Error('Barber already added to treatment'),
     );
   });
+
+  it('should be able to remove a barber from a treatment', () => {
+    const id = randomUUID();
+    const barberId = randomUUID();
+
+    const treatment = new Treatment({
+      name: 'Barba',
+      price: 5000,
+      barbersIds: [barberId, id],
+    });
+
+    treatment.removeBarber(barberId);
+
+    expect(treatment.barbersIds).toEqual([id]);
+  });
 });
