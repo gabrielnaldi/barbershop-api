@@ -14,4 +14,8 @@ export class Barber {
   get weekdays() {
     return this.props.weekdays;
   }
+
+  addSpecialty(specialty: string) {
+    this.props.specialties.push(specialty);
+  }
 }
