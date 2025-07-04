@@ -17,6 +17,10 @@ export class Barber {
   }
 
   addSpecialty(specialty: string) {
+    if (this.props.specialties.includes(specialty)) {
+      throw new Error('Specialty already added to barber');
+    }
+
     this.props.specialties.push(specialty);
   }
 
