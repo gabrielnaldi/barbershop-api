@@ -16,6 +16,10 @@ export class Treatment {
   }
 
   addBarber(barberId: string) {
+    if (this.props.barbersIds.includes(barberId)) {
+      throw new Error('Barber already added to treatment');
+    }
+
     this.props.barbersIds.push(barberId);
   }
 }
