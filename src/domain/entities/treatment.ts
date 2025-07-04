@@ -22,4 +22,8 @@ export class Treatment {
 
     this.props.barbersIds.push(barberId);
   }
+
+  removeBarber(barberId: string) {
+    this.props.barbersIds = this.props.barbersIds.filter(id => id !== barberId);
+  }
 }
