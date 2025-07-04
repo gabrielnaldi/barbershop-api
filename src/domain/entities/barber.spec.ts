@@ -58,6 +58,19 @@ describe('Barber entity', () => {
     expect(barber.specialties).toEqual([specialty]);
   });
 
+  it('should not be able to add the same specialty twice', () => {
+    const specialty = 'Corte de cabelo';
+    const barber = new Barber({
+      name: 'Augusto',
+      specialties: [specialty],
+      weekdays: [],
+    });
+
+    expect(() => barber.addSpecialty(specialty)).toThrow(
+      new Error('Specialty already added to barber'),
+    );
+  });
+
   it('should be able to remove a specialty from a barber', () => {
     const specialty = 'Corte de cabelo';
 
