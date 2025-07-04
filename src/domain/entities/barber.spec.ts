@@ -110,4 +110,17 @@ describe('Barber entity', () => {
       new Error('Weekday already added to barber'),
     );
   });
+
+  it('should be able to remove a weekday from a barber', () => {
+    const weekday = 'MONDAY';
+    const barber = new Barber({
+      name: 'Augusto',
+      specialties: [],
+      weekdays: [weekday],
+    });
+
+    barber.removeWeekday(weekday);
+
+    expect(barber.weekdays).toEqual([]);
+  });
 });
