@@ -31,6 +31,10 @@ export class Barber {
   }
 
   addWeekday(weekday: Weekday) {
+    if (this.props.weekdays.includes(weekday)) {
+      throw new Error('Weekday already added to barber');
+    }
+
     this.props.weekdays.push(weekday);
   }
 }
