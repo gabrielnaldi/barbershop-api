@@ -30,15 +30,17 @@ describe('Barber entity', () => {
     expect(barber.specialties).toEqual([specialty]);
   });
 
-  it('should be able to set weekdays that barbers work', () => {
+  it('should be able to create a barber with weekdays that he works', () => {
+    const weekday = 'MONDAY';
+
     const barberData: BarberProps = {
       name: 'Augusto',
       specialties: [],
-      weekdays: ['MONDAY'],
+      weekdays: [weekday],
     };
 
     const barber = new Barber(barberData);
 
-    expect(barber.weekdays).toEqual(barberData.weekdays);
+    expect(barber.weekdays).toEqual([weekday]);
   });
 });
