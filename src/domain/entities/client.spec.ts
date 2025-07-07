@@ -30,4 +30,32 @@ describe('Client entitie', () => {
     expect(client).toHaveProperty('props.email');
     expect(client.email).toBe(clientData.email);
   });
+
+  it('should be able to update client information', () => {
+    const previousBirthDate = new Date('2025-01-01');
+    const previousName = 'Lorem ipsum';
+    const previousPhone = '+5512912345678';
+
+    const clientData = {
+      name: previousName,
+      birthDate: previousBirthDate,
+      phone: previousPhone,
+    };
+
+    const client = new Client(clientData);
+
+    const newBirthDate = new Date('2025-01-02');
+    const newName = 'Lorem ipsum dolor sit amet';
+    const newPhone = '+5512912345679';
+
+    client.update({
+      name: newName,
+      birthDate: newBirthDate,
+      phone: newPhone,
+    });
+
+    expect(client.name).toBe(newName);
+    expect(client.birthDate).toBe(newBirthDate);
+    expect(client.phone).toBe(newPhone);
+  });
 });
