@@ -1,7 +1,7 @@
+import { TreatmentProps } from '../contracts/treatment';
+
 export class Treatment {
-  constructor(
-    private props: { name: string; price: number; barbersIds: string[] },
-  ) {}
+  constructor(private props: TreatmentProps) {}
 
   get name() {
     return this.props.name;
