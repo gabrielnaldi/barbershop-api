@@ -18,4 +18,8 @@ export class Client {
   get email() {
     return this.props.email;
   }
+
+  update(props: Partial<ClientProps>) {
+    this.props = { ...this.props, ...props };
+  }
 }
