@@ -42,7 +42,7 @@ export class Barber {
     this.props.weekdays = this.props.weekdays.filter(w => w !== weekday);
   }
 
-  updateName(name: string) {
+  changeName(name: string) {
     this.props.name = name;
   }
 }
