@@ -123,4 +123,18 @@ describe('Barber entity', () => {
 
     expect(barber.weekdays).toEqual([]);
   });
+
+  it('should be able to update barber name', () => {
+    const barber = new Barber({
+      name: 'Augusto',
+      specialties: [],
+      weekdays: [],
+    });
+
+    const updatedName = 'John Doe';
+
+    barber.updateName(updatedName);
+
+    expect(barber.name).toBe(updatedName);
+  });
 });
